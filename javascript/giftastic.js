@@ -12,6 +12,8 @@ function buttons(){
 function retrieveImages(){
 	$('button').on('click', function(){
 
+		$('#gif').empty();
+		
 		var t = $(this).data('topic');
 
 		var queryURL = "http://api.giphy.com/v1/gifs/search?q=funny+" + t + "&api_key=dc6zaTOxFJmzC&limit=10";
