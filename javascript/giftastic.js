@@ -4,6 +4,7 @@ function buttons(){
 	for (var i = 0; i < topicArray.length; i++) {
 		var b = $('<button>');
 		b.text(topicArray[i]);
+		b.attr('data-topic', topicArray[i]);
 		$('#buttons').append(b);
 	}
 };
