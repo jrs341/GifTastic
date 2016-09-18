@@ -31,10 +31,10 @@ function retrieveImages(){
 		     	var imageDiv = $('<div>');
 		     	imageDiv.attr('id',i);
 		     		if (i != 0) {
-			     		imageDiv.addClass('display');
+			     		imageDiv.addClass('item');
 			     		$('.carousel-inner').append(imageDiv);
 		     		} else {
-		     			imageDiv.addClass('active');
+		     			imageDiv.addClass('item active');
 		     			$('.carousel-inner').append(imageDiv);
 		     		}	
 			    }
@@ -46,11 +46,12 @@ function retrieveImages(){
 			    topicImage.attr('data-still', results[i].images.original_still.url);
 			    topicImage.attr('data-animate', results[i].images.fixed_height.url);
 			    topicImage.attr('data-state', 'still');
+			    topicImage.addClass('topicImage');
+			    topicImage.addClass('img-responsive');
 			    if (i != 0) {
-			     	topicImage.addClass('topicImage');
 		     		$('#' + divID).append(topicImage);
 			    } else {
-			     	topicImage.addClass('topicImage active')
+			     	topicImage.addClass('active')
 			     	$('#' + divID).append(topicImage);
 			    }
 			 }
