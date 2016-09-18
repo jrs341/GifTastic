@@ -29,21 +29,31 @@ function retrieveImages(){
 
 		     for (var i = 0; i < results.length; i++) {
 		     	var imageDiv = $('<div>');
-		     		imageDiv.attr('id',i);
-		     		imageDiv.addClass('display');
-		     		$('.carousel-inner').append(imageDiv);
-		     }
+		     	imageDiv.attr('id',i);
+		     		if (i != 0) {
+			     		imageDiv.addClass('display');
+			     		$('.carousel-inner').append(imageDiv);
+		     		} else {
+		     			imageDiv.addClass('active');
+		     			$('.carousel-inner').append(imageDiv);
+		     		}	
+			    }
 
 		     for (var i = 0; i < results.length; i++) {
 		     	var topicImage = $('<img>');
 		     	var divID = i;
-			     	topicImage.attr('src',results[i].images.original_still.url);
-			     	topicImage.attr('data-still', results[i].images.original_still.url);
-			     	topicImage.attr('data-animate', results[i].images.fixed_height.url);
-			     	topicImage.attr('data-state', 'still');
+			    topicImage.attr('src',results[i].images.original_still.url);
+			    topicImage.attr('data-still', results[i].images.original_still.url);
+			    topicImage.attr('data-animate', results[i].images.fixed_height.url);
+			    topicImage.attr('data-state', 'still');
+			    if (i != 0) {
 			     	topicImage.addClass('topicImage');
-		     		$('#' + divID).append(topicImage);	
-		     }
+		     		$('#' + divID).append(topicImage);
+			    } else {
+			     	topicImage.addClass('topicImage active')
+			     	$('#' + divID).append(topicImage);
+			    }
+			 }
 		}); 
 	})
 
