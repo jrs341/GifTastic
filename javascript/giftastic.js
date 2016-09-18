@@ -15,7 +15,7 @@ function buttons(){
 function retrieveImages(){
 	$('button').on('click', function(){
 
-		$('#gif').empty();
+		$('.carousel-inner').empty();
 
 		var t = $(this).data('topic');
 
@@ -28,16 +28,21 @@ function retrieveImages(){
 		     var results = response.data;
 
 		     for (var i = 0; i < results.length; i++) {
+		     	var imageDiv = $('<div>');
+		     		imageDiv.attr('id',i);
+		     		imageDiv.addClass('display');
+		     		$('.carousel-inner').append(imageDiv);
+		     }
+
+		     for (var i = 0; i < results.length; i++) {
 		     	var topicImage = $('<img>');
+		     	var divID = i;
 			     	topicImage.attr('src',results[i].images.original_still.url);
 			     	topicImage.attr('data-still', results[i].images.original_still.url);
 			     	topicImage.attr('data-animate', results[i].images.fixed_height.url);
 			     	topicImage.attr('data-state', 'still');
 			     	topicImage.addClass('topicImage');
-			     // var imageDiv = $('<div>');
-		     		// imageDiv.addClass('.display');
-			    // $('.carousel-inner').append(imageDiv);
-		     	$('.carousel-inner').append(topicImage);	
+		     		$('#' + divID).append(topicImage);	
 		     }
 		}); 
 	})
