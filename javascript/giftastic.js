@@ -29,19 +29,9 @@ function retrieveImages(){
 
 		     for (var i = 0; i < results.length; i++) {
 		     	var imageDiv = $('<div>');
-		     	imageDiv.attr('id',i);
-		     		if (i != 0) {
-			     		imageDiv.addClass('item');
-			     		$('.carousel-inner').append(imageDiv);
-		     		} else {
-		     			imageDiv.addClass('item active');
-		     			$('.carousel-inner').append(imageDiv);
-		     		}	
-			    }
-
-		     for (var i = 0; i < results.length; i++) {
 		     	var topicImage = $('<img>');
 		     	var divID = i;
+		     	imageDiv.attr('id',i);
 			    topicImage.attr('src',results[i].images.original_still.url);
 			    topicImage.attr('data-still', results[i].images.original_still.url);
 			    topicImage.attr('data-animate', results[i].images.fixed_height.url);
@@ -49,8 +39,12 @@ function retrieveImages(){
 			    topicImage.addClass('topicImage');
 			    topicImage.addClass('img-responsive');
 			    if (i != 0) {
+			    	imageDiv.addClass('item');
+			     	$('.carousel-inner').append(imageDiv);
 		     		$('#' + divID).append(topicImage);
 			    } else {
+			    	imageDiv.addClass('item active');
+		     		$('.carousel-inner').append(imageDiv);
 			     	topicImage.addClass('active')
 			     	$('#' + divID).append(topicImage);
 			    }
@@ -95,10 +89,6 @@ $(document).ready(function(){
 
 	changeState();
 
-	retrieveImages();
-
-
-
-	
+	retrieveImages();	
 
 });
