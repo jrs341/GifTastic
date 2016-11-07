@@ -13,8 +13,7 @@
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-	<!-- Optional theme -->
-	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -22,10 +21,11 @@
 <body>
 
 <header class="page-header">
-	Funny GifTastic Videos
+	<h1>Funny GifTastic Videos</h1>
 </header>
 
 <div class="container-fluid">
+
 	<div class="row">
 
 		<div id="buttons" class="col-sm-6">
@@ -35,10 +35,11 @@
 		<form id="topicForm" class="col-sm-6">
 			<label for="topicInput">Search a topic here</label>
 			<input type="text" id="topicInput">
-
-			<input id='addTopic' type="submit">
+			<input id='addTopic' type="button" text="submit">
 		</form>
+
 	</div>
+
 </div>
 		
 	<div id="display" class="carousel slide" data-ride="carousel">
@@ -78,8 +79,6 @@
 
 	</div>
 
-
-
-</script>
+<!-- </script> -->
 </body>
 </html>
