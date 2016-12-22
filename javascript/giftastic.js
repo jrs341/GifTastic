@@ -5,7 +5,7 @@ function buttons(){
 	$('#buttons').empty();
 
 	for (var i = 0; i < topicArray.length; i++) {
-		var b = $('<button>');
+		var b = $('<button class="btn pill">');
 		b.text(topicArray[i]);
 		b.attr('data-topic', topicArray[i]);
 		$('#buttons').append(b);
