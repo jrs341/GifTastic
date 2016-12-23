@@ -1,6 +1,3 @@
-body {
-
-}
 
 .page-header {
 	height: 200px;
@@ -17,19 +14,11 @@ button {
 	margin-left: 10px;
 }
 
-#topicForm {
-
-}
-
 #addTopic {
 	height: 34px;
-	width: 60px;
+	width: 66px;
 	background-color: yellow;
 	margin-left: 10px;
-}
-
-#gif {
-
 }
 
 .topicImage {
