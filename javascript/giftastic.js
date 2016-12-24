@@ -52,9 +52,8 @@ function retrieveImages(){
 		}); 
 	})
 
-	addTopic();
+	// addTopic();
 
-	// changeState();
 }
 
 function changeState(){
@@ -81,6 +80,8 @@ function addTopic(){
 
 		retrieveImages();
 
+		changeState();
+
 		return false;
 	});
 }
@@ -88,6 +89,8 @@ function addTopic(){
 $(document).ready(function(){
 
 	buttons();
+
+	addTopic();
 
 	retrieveImages();	
 
