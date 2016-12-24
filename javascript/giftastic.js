@@ -53,6 +53,8 @@ function retrieveImages(){
 	})
 
 	addTopic();
+
+	// changeState();
 }
 
 function changeState(){
@@ -87,8 +89,8 @@ $(document).ready(function(){
 
 	buttons();
 
-	changeState();
-
 	retrieveImages();	
+
+	changeState();
 
 });
