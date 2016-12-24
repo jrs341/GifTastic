@@ -19,7 +19,7 @@ function retrieveImages(){
 
 		var t = $(this).data('topic');
 
-		var queryURL = "http://api.giphy.com/v1/gifs/search?q=funny+" + t + "&api_key=dc6zaTOxFJmzC&limit=10";
+		var queryURL = "https://api.giphy.com/v1/gifs/search?q=funny+" + t + "&api_key=dc6zaTOxFJmzC&limit=10";
 
 		$.ajax({url: queryURL, method: 'GET'})
 		 .done(function(response) {
